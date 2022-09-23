@@ -53,6 +53,7 @@ const ulNav2 = document.getElementById("ulNav2");
 // 	hoverNav2.firstElementChild.classList.remove("rotate-90");
 // 	hoverNav2.firstElementChild.classList.add("rotate-0");
 // };
+
 // wrap1
 wrap1.onmouseover = function () {
 	ulNav1.classList.remove("hidden");

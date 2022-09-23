@@ -2,7 +2,12 @@
 module.exports = {
 	content: ["./application/views/**/*.{html,js,php}"],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				Blue: "#0369CA",
+				Red: "#F90000",
+			},
+		},
 	},
 	plugins: [],
 };

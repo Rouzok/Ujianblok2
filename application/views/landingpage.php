@@ -26,24 +26,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
       items-center
       justify-around
       py-5
-      md:py-5
-      lg:py-0
-      lg:justify-center
+      xl:py-0
+      xl:justify-center
     ">
       <a href="" class="
         focus:outline-none
         focus-visible:ring-2
         ring-neutral-900
         rounded-sm
-        lg:top-4.5
         z-50
         hover:opacity-75
         transition-opacity
       " aria-label="Go to homepage">
-        <img src="<?= base_url("assets/img/logo_hori.png") ?>" class="w-24 md:w-28 lg:w-28" alt="Morent Logo">
+        <img src="<?= base_url("assets/img/logo_hori.png") ?>" class="w-24 xl:w-52" alt="Morent Logo">
       </a>
       <button id="menu" class="
-        lg:hidden
+        xl:hidden
         focus:outline-none
         focus-visible:ring-2
         ring-neutral-900
@@ -69,24 +67,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
         text-lg
         p-6
         items-center
-        lg:flex
-        lg:flex-row
-        lg:justify-end
-        lg:static
-        lg:shadow-none
-        lg:w-1/2
+        xl:flex
+        xl:flex-row
+        xl:justify-end
+        xl:static
+        xl:shadow-none
+        xl:w-1/2
         
         ">
         <a role="menuitem" class="
             py-1
             px-4
             text-neutral-900
-            hover:text-white
+            hover:text-Red
             duration-300
             focus:outline-none
             " href="">Home</a>
 
-        <!-- test -->
+        <!-- Hover Dropdown -->
         <div class="w-max " id="wrapHover1">
           <a role="menuitem" class=" px-4 py-1 text-neutral-900 hover:text-neutral-500 transition duration-300 ease-in-out flex items-center justify-center w-max" href="#" type="button" id="hoverNav1">
             About Us
@@ -95,7 +93,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </svg>
 
           </a>
-          <ul class="hidden absolute right-[40rem] top-[3.8rem] dropdown-menu min-w-max bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg bg-clip-padding border-none transition duration-300" id="ulNav1">
+          <ul class="hidden absolute right-[35rem] top-[3.8rem] dropdown-menu min-w-max bg-slate-50 text-base z-50 py-2 list-none text-left rounded-lg shadow-lg bg-clip-padding transition duration-300 border-2 border-slate-100" id="ulNav1">
             <li>
               <h6 class="text-gray-900 font-semibold text-sm py-2 px-4 pr-20 block w-full whitespace-nowrap bg-transparent">
                 About Us
@@ -119,7 +117,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
           </ul>
         </div>
-        <!-- test -->
+        <!-- End Hover Dropdown -->
 
         <a role="menuitem" class="
             py-1
@@ -130,7 +128,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             focus:outline-none
             " href="">Product</a>
 
-        <!-- test -->
+        <!-- Hover Dropdown -->
         <div class="w-max" id="wrapHover2">
           <a role="menuitem" class=" px-4 py-1 text-neutral-900 hover:text-neutral-500 transition duration-300 ease-in-out flex items-center justify-center w-max" href="#" type="button" id="hoverNav2">
             Latest News
@@ -139,7 +137,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </svg>
 
           </a>
-          <ul class="hidden absolute top-[3.8rem] right-[26rem] dropdown-menu min-w-max bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg bg-clip-padding border-none" id="ulNav2">
+          <ul class="hidden absolute top-[3.8rem] right-[22rem] dropdown-menu min-w-max bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg bg-clip-padding border-none" id="ulNav2">
             <li>
               <h6 class="text-gray-900 font-semibold text-sm py-2 px-4 pr-20 block w-full whitespace-nowrap bg-transparent">
                 Latest News
@@ -163,7 +161,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
           </ul>
         </div>
-        <!-- test -->
+        <!-- End Hover Dropdown -->
 
         <a role="menuitem" class="
                 py-1
@@ -184,21 +182,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <div class="max-w-full mx-auto relative" x-data="{
         activeSlide: 1,
         slides: [
-          {id: 1, title: 'Slide 1', src: '<?= base_url("assets/img/morent.png") ?>'},
-          {id: 2, title: 'Slide 2', src: '<?= base_url("assets/img/mobil1.png") ?>'},
-          {id: 3, title: 'Slide 3', src: '<?= base_url("assets/img/mobil2.png") ?>'},
-          {id: 4, title: 'Slide 4', src: '<?= base_url("assets/img/mobil3.png") ?>'},
-          {id: 5, title: 'Slide 5', src: '<?= base_url("assets/img/mobil4.png") ?>'}
+          {id: 1, title: 'Slide 1', src: '<?= base_url("assets/img/banner1.jpg") ?>'},
+          {id: 2, title: 'Slide 2', src: '<?= base_url("assets/img/banner2.jpg") ?>'},
+          {id: 3, title: 'Slide 3', src: '<?= base_url("assets/img/banner3.jpg") ?>'},
+          {id: 4, title: 'Slide 4', src: '<?= base_url("assets/img/banner4.jpg") ?>'}
         ],
         loop(){
-            setInterval(() => {this.activeSlide = this.activeSlide === 5 ? 1 : this.activeSlide + 1}, 3000)
+            setInterval(() => {this.activeSlide = this.activeSlide === 4 ? 1 : this.activeSlide + 1}, 5000)
         }
       }" x-init="loop">
+
         <template x-for="(slide in slides" : key="slide.id">
-          <div x-show="activeSlide === slide.id" class="p-24 h-80 flex justify-center text-white">
-            <div>
-              <img :src="slide.src" class="object-cover " width="300" />
-            </div>
+          <div x-show="activeSlide === slide.id" class="text-white inline relative w-4/5 h-86">
+              <img :src="slide.src" class="object-cover w-full h-[39.8rem]" />
           </div>
         </template>
 
@@ -220,13 +216,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
           </div>
         </div>
 
-        <div class="absolute w-full flex items-center justify-center px-4 py-5">
+        <div class="absolute w-1/3 bottom-5 flex items-center justify-center left-1/3">
           <template x-for="(slide in slides" : key="slide.id">
-            <button class="flex-1 w-4 h-2 mt-4 mx-2 mb-2 rounded-full overflow-hidden transition-colors duration-200 ease-out
-            hover:bg-slate-500 hover:shadow-lg" :class="{
-             'bg-slate-600' : activeSlide === slide.id, 
-             'bg-slate-300' : activeSlide !== slide.id, 
-            }" x-on:click="activeSlide = slide.id"></button>
+              <button class="flex-1 w-0 h-2 mt-4 mx-2 mb-2 rounded-full overflow-hidden transition-colors duration-200 ease-out
+              hover:bg-blue-300 hover:shadow-lg" :class="{
+              'bg-Blue' : activeSlide === slide.id, 
+              'bg-slate-300' : activeSlide !== slide.id, 
+              }" x-on:click="activeSlide = slide.id">
+            </button>
           </template>
         </div>
 
