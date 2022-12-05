@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Coba extends CI_Controller {
+class Shop extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,8 +18,15 @@ class Coba extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+    public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('auth_model');
+	}
+
 	public function index()
 	{
-		$this->load->view('coba');
+        $data = $this->auth_model->getReq(); //data user (yang login)
+		$this->load->view('shop_page', $data);
 	}
 }
