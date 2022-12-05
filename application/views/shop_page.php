@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pharma Assist Shop</title>
     <link rel="shortcut icon" href="<?= base_url('assets/img/logo_ver.png');  ?>" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url("assets/css/shop.css") ?>">
 </head>
-<body class="bg-gray-800 h-screen">
+<body class="bg-gray-800 h-screen" style="font-family: Montserrat;">
 <nav class="mx-auto z-20 bg-gray-900 shadow fixed top-0 xl:w-full w-full">
     <div class="
       container
@@ -216,7 +217,7 @@
       </div>
       <div class="w-1/2 fixed flex flex-col items-center gap-10 justify-center -z-50 top-[22%] right-32">
         <div class="text-white text-5xl duration-200 font-semibold fadeUp ease-in-out">Mentats</div>
-        <div class="text-white text-2xl duration-200 font-semibold fadeUp ease-in-out delay-[50ms]">
+        <div class="text-white text-2xl duration-200 fadeUp ease-in-out delay-[50ms]">
         The chalky red tablets manufactured by Med-Tek Laboratories were a popular recreational drug that was favored by consumers for their effect on creativity. The active ingredient is a powerful nootropic that increases memory-related functions and speeds up other mental processes.
         </div>
         <div class="flex self-start gap-2 fadeUp text-white duration-200">
@@ -225,7 +226,7 @@
         <button
           class="self-start fadeUp rounded-full px-4 py-2 text-white/70 cursor-pointer hover:bg-gray-800 bg-gray-900/95 hover:text-white hover:border-white/5 duration-200 text-sm capitalize text-white hover:shadow hover:shadow-black/60 delay-[125ms]"
         >
-          Source Code
+          Buy Now
         </button>
       </div>
     </div>
@@ -237,7 +238,7 @@
       </div>
       <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70 duration-500"></div>
       <div class="absolute inset-0 flex translate-y-1/2 flex-col gap-2 items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-        <h1 class="font-dmserif text-xl font-bold text-white">Morent</h1>
+        <h1 class="font-dmserif text-xl font-bold text-white">Peelz</h1>
         <button
           class="rounded-lg px-2 py-2 text-white/70 cursor-pointer hover:bg-gray-800/40 bg-white/20 hover:text-white hover:border-white/5 duration-300 transition-colors text-sm capitalize text-white hover:shadow hover:shadow-black/60"
           onclick="item1(1)"
@@ -246,18 +247,15 @@
         </button>
       </div>
       <div class="w-1/2 fixed flex flex-col items-center gap-10 justify-center -z-50 top-[22%] right-32">
-        <div class="text-white text-5xl duration-200 font-semibold fadeUp ease-in-out">Morent</div>
-        <div class="text-white text-2xl duration-200 font-semibold fadeUp ease-in-out delay-[50ms]">Morent is a car ordering website, using the PHP language along with the codeigniter 3 framework.</div>
+        <div class="text-white text-5xl duration-200 font-semibold fadeUp ease-in-out">Peelz</div>
+        <div class="text-white text-2xl duration-200 fadeUp ease-in-out delay-[50ms]">Genteks opioid painkiller for severe pain, if Paracetamol or Ibuprofen doesnt help. Hospital-environment only and CEDA-certified safe.</div>
         <div class="flex self-start gap-2 fadeUp text-white duration-200">
-          <div class="px-3 bg-gray-800 rounded-full duration-200 fadeUp">PHP</div>
-          <div class="px-3 bg-gray-800 rounded-full duration-200 fadeUp delay-100">HTMl</div>
-          <div class="px-3 bg-gray-800 rounded-full duration-200 fadeUp delay-[125ms]">CSS</div>
-          <div class="px-3 bg-gray-800 rounded-full duration-200 fadeUp delay-[125ms]">Codeigniter</div>
+          <div class="px-3 bg-gray-800 rounded-full duration-200 fadeUp">Pill</div>
         </div>
         <button
           class="self-start fadeUp rounded-full px-4 py-2 text-white/70 cursor-pointer hover:bg-gray-800 bg-gray-900/95 hover:text-white hover:border-white/5 duration-200 text-sm capitalize text-white hover:shadow hover:shadow-black/60 delay-[125ms]"
         >
-          Source Code
+          Buy Now
         </button>
       </div>
     </div>
